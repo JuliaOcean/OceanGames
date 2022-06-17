@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.8
+# v0.19.9
 
 #> [frontmatter]
 #> title = "ocean_and_sea_locator"
@@ -41,9 +41,6 @@ md"## Packages and plots"
 # ╔═╡ 2b7d8f58-2660-4c28-a6d2-e6081fe67045
 swap(x) = [x[2], x[1]]
 
-# ╔═╡ 30c6d8e7-0f55-423c-8c28-3882e5806008
-
-
 # ╔═╡ f417361a-70ae-4070-ae08-9e3491388d68
 land_color, water_color, wrong_color, right_color = ColorSchemes.seaborn_colorblind[[8, 1, 4, 3]]
 
@@ -56,6 +53,9 @@ function plot_blank_globe()
 	plot!(plt, coast_shapes, fillcolor=land_color, linewidth=0)
 	return plt
 end
+
+# ╔═╡ 30c6d8e7-0f55-423c-8c28-3882e5806008
+ENV["DATADEPS_ALWAYS_ACCEPT"]="true"
 
 # ╔═╡ 1c346ac8-2842-4454-a22c-da4842ce29fa
 oceans_select_list = [ocn=>ocn.name for ocn in oceanpolygons()]
@@ -1312,12 +1312,12 @@ version = "0.9.1+5"
 # ╠═c9acb76d-ac71-4307-8acc-74fd44f5e24f
 # ╠═2b7d8f58-2660-4c28-a6d2-e6081fe67045
 # ╠═06b506ca-e77a-4aec-8d26-997f8682c150
-# ╠═30c6d8e7-0f55-423c-8c28-3882e5806008
 # ╠═44762d59-d3ea-4144-b4c5-3b9db3bf08a6
 # ╠═a952f635-5eea-4b67-9ff9-46a7a25de9dc
 # ╠═35897111-72c9-4479-a481-87cf2cc0cdea
 # ╠═f417361a-70ae-4070-ae08-9e3491388d68
 # ╠═d71ccc4d-0d6f-4d78-9589-b324e1f5041e
+# ╠═30c6d8e7-0f55-423c-8c28-3882e5806008
 # ╠═1c346ac8-2842-4454-a22c-da4842ce29fa
 # ╠═2963a64b-b54f-429f-9cca-70df717c0ee1
 # ╟─00587f0c-ef2c-4133-b2c8-a7019076d99d
